@@ -285,6 +285,7 @@ header {
 .pesantiket .contact-pesantiket form select,
 .pesantiket .contact-pesantiket form button {
   padding: 10px 10px;
+  width: 100%;
   border-radius: 10px;
 }
 
