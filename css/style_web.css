@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+
+:root {
+  --clr-dark: #1e201e;
+  --clr-white: #ececec;
+  --clr-main: #c7253e;
+  --clr-main-dark: #821131;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clr-dark);
+}
+
+/* Navbar Style */
+
+header {
+  background-color: var(--clr-main);
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.navbar {
+  /* display: none; */
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background-color: var(--clr-white);
+  width: 18rem;
+  height: 100vh;
+  transition: 0.3s linear;
+}
+
+.navbar.active {
+  right: 0;
+}
+
+.navbar a {
+  color: var(--clr-main);
+  display: block;
+  margin: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  transform: translateX(10px);
+  border-bottom: 2px solid red;
+}
+
+.nav-right {
+  padding: 10px;
+}
+
+.nav-right a {
+  color: var(--clr-white);
+}
+
+.nav-right a {
+  font-size: 1.5rem;
+}
+
+#menu {
+  display: inline-block;
+}
+
+/* Beranda */
+
+.beranda {
+  padding: 5px;
+  margin: 100px 0px 50px 0px;
+}
+
+.beranda h1 {
+  color: var(--clr-white);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.beranda .deskripsi {
+  width: 90%;
+  margin: auto;
+  color: var(--clr-white);
+  border: 2px solid var(--clr-main);
+  box-shadow: 0px 0px 20px var(--clr-main-dark);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.anggota {
+  padding-left: 70px;
+}
+
+.beranda .deskripsi p {
+  margin: 10px;
+  text-align: justify;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+a {
+  color: aliceblue;
+}
+
+.beranda .deskripsi p.list,
+.beranda .deskripsi p.list b {
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: var(--clr-main);
+  padding: 15px;
+  text-align: center;
+  color: var(--clr-white);
+}
+
+.footer p {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    justify-content: center;
+    position: static;
+  }
+
+  .navbar {
+    position: static;
+    background-color: transparent;
+    display: flex; /* Mengatur elemen navbar menjadi horizontal */
+    height: auto; /* Menghapus height yang sebelumnya diatur untuk tampilan mobile */
+    width: 100%;
+    right: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center; /* Memposisikan elemen di tengah */
+    padding: 10px;
+    transition: none; /* Hilangkan transisi di layar besar */
+  }
+
+  .navbar a {
+    margin: 0 20px;
+    color: var(--clr-white);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  header nav.navbar a:hover {
+    transform: scale(1.2);
+    border-bottom: none;
+    text-shadow: 0px 0px 10px #ffff;
+  }
+
+  #menu {
+    display: none; /* Sembunyikan menu di layar besar */
+  }
+
+  .pesantiket .alert {
+    width: 700px;
+  }
+
+  .pesantiket .contact-pesantiket {
+    width: 700px;
+  }
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  margin: 14px;
+}
+
+.logo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.deskripsi {
+  text-align: center;
+  margin: 20px 0;
+  color: var(--clr-white);
+}
+
+.deskripsi a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.deskripsi a:hover {
+  color: var(--clr-main);
+}
+
+.deskripsi .kontak .hubungi:hover {
+  background-color: var(--clr-white);
+}
+
+.anggota {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.anggota-item {
+  text-align: center;
+}
+
+.anggota-foto {
+  width: 100px; /* Atur sesuai kebutuhan */
+  height: 100px; /* Atur sesuai kebutuhan */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.anggota a {
+  display: block;
+  color: var(--clr-white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.anggota a:hover {
+  color: var(--clr-main);
+}
+
+.kontak {
+  position: relative;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+.kontak a {
+  position: relative;
+  display: flex;
+  background-color: #c7253e;
+  margin: 10px;
+  border-radius: 300px;
+  justify-content: center;
+}

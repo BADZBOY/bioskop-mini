@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <title>Bioskop Mini</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#movies">Film</a>
+        <a href="index.html#pesantiket">Pesan Tiket</a>
+        <a href="tentangkami.html">Tentang Kami</a>
+        <a href="request.html">Request Film</a>
+        <a href="booking.html">Booking Tempat</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </header>
+
+    <div class="pesantiket" id="pesantiket">
+      <h2>Booking</h2>
+      <div class="alert none">
+        <p><strong>Terimakasih!</strong>, booking anda telah tersimpan</p>
+      </div>
+      <div class="contact-pesantiket">
+        <form action="" name="booking-bioskop-online">
+          <label for="nama">Nama : </label>
+          <input
+            type="text"
+            id="nama"
+            placeholder="Masukkan nama kamu..."
+            name="nama"
+            required
+          />
+          <label for="email">Email : </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Masukkan email kamu..."
+            name="email"
+            required
+          />
+          <label for="request">Booking : </label>
+          <input
+            type="date"
+            id="booking"
+            placeholder="Booking tanggal...."
+            name="booking"
+            required
+          />
+          <label for="film">Film : </label>
+          <input
+            type="text"
+            id="film"
+            placeholder="Masukkan judul film...."
+            name="film"
+            required
+          />
+          <br />
+          <button type="submit" name="submit">BOOKING</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright 2024 ♥ By @ BADZ BOY</p>
+    </div>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzMSsYfkljiwRBbEY9FsPF_SOt4-aA0FckC4PJOzFXmOuxjxxcyu9GxxZAfwxFh0dYubg/exec";
+      const form = document.forms["booking-bioskop-online"];
+      const myAlert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            myAlert.classList.toggle("none");
+            setTimeout(function () {
+              myAlert.classList.toggle("none");
+            }, 3000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
