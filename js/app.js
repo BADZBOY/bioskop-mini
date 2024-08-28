@@ -77,6 +77,7 @@ document.addEventListener("alpine:init", () => {
         tanggal: "tomorrow",
         year: "2024",
         rating: "7,6/10",
+        link: "https://youtu.be/EWkyuAO3rV4?si=je8Bte1_qWjeKQ0X",
       },
       {
         id: 7,
@@ -88,17 +89,19 @@ document.addEventListener("alpine:init", () => {
         tanggal: "tomorrow",
         year: "2024",
         rating: "6,3/10",
+        link: "https://youtu.be/det59XYe9R8?si=H1gerDRd-bF3oFOR",
       },
       {
         id: 8,
         img: "film/mencuriraden.jpg",
-        name: "Mencuri Raden",
+        name: "Mencuri Raden Saleh",
         jam: "14.00",
         sinopsis:
           "Film aksi dan komedi tentang sekelompok pencuri yang merencanakan pencurian lukisan berharga karya Raden Saleh. Mereka menghadapi berbagai tantangan dan komplikasi dalam misi mereka.",
         tanggal: "tomorrow",
         year: "2022",
         rating: "7,3/10",
+        link: "https://youtu.be/DN3sRz_veBU?si=FaYnQxg6fJcMfIci",
       },
       {
         id: 9,
@@ -110,6 +113,7 @@ document.addEventListener("alpine:init", () => {
         tanggal: "tomorrow",
         year: "2024",
         rating: "5,8/10",
+        link: "https://youtu.be/X3_3rZg1UKk?si=-zmwrjd0lODcpDrW",
       },
       {
         id: 10,
@@ -121,6 +125,7 @@ document.addEventListener("alpine:init", () => {
         tanggal: "tomorrow",
         year: "2024",
         rating: "6,1/10",
+        link: "https://youtu.be/-HuNHKFaW60?si=5B7Y3LEshIDbQjcm",
       },
     ],
 
