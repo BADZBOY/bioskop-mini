@@ -74,23 +74,23 @@
 
     <!-- Movies -->
     <div class="movies" id="movies">
-        <h2>Film</h2>
+        <h2 data-aos="fade-down">Film</h2>
         <div class="tanggal">
             <div class="tanggal-item">
-                <span id="today" x-on:click="setHari('today')" x-bind:class="{ 'active': hari === 'today' }">Tayang
+                <span id="today" x-on:click="setHari('today')" x-bind:class="{ 'active': hari === 'today' }" data-aos="fade-right" >Tayang
                     Minggu Ini</span>
                 <span class="tanggal-info" id="today-info">25 - 31 Ags 2024</span>
             </div>
             <span> | </span>
             <div class="tanggal-item">
                 <span id="tomorrow" x-on:click="setHari('tomorrow')"
-                    x-bind:class="{ 'active': hari === 'tomorrow' }" >Tayang Minggu Depan</span>
+                    x-bind:class="{ 'active': hari === 'tomorrow' }" data-aos="fade-left">Tayang Minggu Depan</span>
                 <span class="tanggal-info" id="tomorrow-info">1 - 7 Sep 2024</span>
             </div>
         </div>
         <div class="movies-card">
             <template x-for="(item, index) in filteredItems" :key="index">
-                <div class="card" data-aos="fade-down">
+                <div class="card" data-aos="zoom-in">
                     <img :src="'images/' + item.img" :alt="item.name" />
                     <h3 x-text="item.name"></h3>
                     <p x-text="item.jam"></p>
